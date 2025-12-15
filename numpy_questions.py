@@ -75,14 +75,14 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
 
-    if n_terms = 0:
+    if n_terms == 0:
         return 1
     else:
         product = 1.
         for n in range(1, n_terms + 1):
             numerator = 4 * n * n
-            denominator = numerator - 1
-            product *= numerator / denominator
+            denominator = 4 * n * n - 1
+            product = product * numerator / denominator
         pi_approx = product * 2
         return pi_approx
     return 0.
